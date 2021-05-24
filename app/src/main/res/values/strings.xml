@@ -2,4 +2,19 @@
     <string name="app_name">QuickChat</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_your_password">Forgot your password ?</string>
+    <string name="username">Username</string>
+    <string name="type_a_message_here">Type a message here</string>
+    <string name="create_a_new_account">Create a New Account</string>
+    <string name="register">Register</string>
+    <string name="your_email">Your email</string>
+    <string name="reset">Reset</string>
+    <string name="by_clicking_this_button_you_will_receive_an_email_to_reset_your_password">By clicking this button, you will receive an email to reset your password</string>
+    <string name="quick_chat">Quick Chat</string>
+    <string name="hello">hello</string>
+    <string name="search">Search.....</string>
+    <string name="profile">Profile</string>
 </resources>
