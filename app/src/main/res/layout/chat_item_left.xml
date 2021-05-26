@@ -16,7 +16,7 @@
         android:layout_marginLeft="5dp"
         android:layout_toEndOf="@+id/profile_image"
         android:id="@+id/show_message"
-        android:text="Hello"
+        android:text="@string/hello"
         android:padding="8dp"
         android:background="@drawable/background_left"
         android:layout_marginStart="25dp"/>

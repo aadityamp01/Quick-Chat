@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="@string/login"
             android:gravity="center"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -37,7 +37,7 @@
             android:inputType="textEmailAddress"
             android:layout_marginTop="10dp"
             app:met_floatingLabel="normal"
-            android:hint="Email"/>
+            android:hint="@string/email"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
@@ -46,13 +46,13 @@
             android:inputType="textPassword"
             android:layout_marginTop="10dp"
             app:met_floatingLabel="normal"
-            android:hint="Password"/>
+            android:hint="@string/password"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Login"
+            android:text="@string/login"
             android:layout_marginTop="10dp"
             android:id="@+id/btn_login"
             android:background="@color/colorPrimary"
@@ -67,7 +67,7 @@
             android:layout_gravity="end"
             android:layout_marginTop="10dp"
             android:gravity="end"
-            android:text="Forgot your password ?"
+            android:text="@string/forgot_your_password"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />

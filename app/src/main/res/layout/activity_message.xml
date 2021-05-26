@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/username"
-                android:text="Username"
+                android:text="@string/username"
                 android:textColor="#ffff"
                 android:textStyle="bold"
                 android:layout_marginStart="25dp"/>
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_toStartOf="@id/btn_send"
             android:layout_centerVertical="true"
-            android:hint="Type a message here"
+            android:hint="@string/type_a_message_here"
             android:background="@android:color/transparent"
             />
         <ImageButton
