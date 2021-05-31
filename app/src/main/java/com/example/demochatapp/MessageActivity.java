@@ -29,6 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -56,13 +57,8 @@ public class MessageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_message);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("");
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MessageActivity.this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-            }
-        });
+        Objects.requireNonNull(getSupportActionBar()).setTitle("");
+        toolbar.setNavigationOnClickListener(view -> startActivity(new Intent(MessageActivity.this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)));
 
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -77,17 +73,14 @@ public class MessageActivity extends AppCompatActivity {
 
         intent = getIntent();
         userid = intent.getStringExtra("userid");
-        btn_send.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String msg = text_send.getText().toString();
-                if(!msg.equals("")){
-                    sendMessage(fuser.getUid(),userid,msg);
-                }else{
-                    Toast.makeText(getApplicationContext(),"You can't send empty message",Toast.LENGTH_LONG).show();
-                }
-                text_send.setText("");
+        btn_send.setOnClickListener(view -> {
+            String msg = text_send.getText().toString();
+            if(!msg.equals("")){
+                sendMessage(fuser.getUid(),userid,msg);
+            }else{
+                Toast.makeText(getApplicationContext(),"You can't send empty message",Toast.LENGTH_LONG).show();
             }
+            text_send.setText("");
         });
         fuser = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users").child(userid);
@@ -95,6 +88,7 @@ public class MessageActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 User user = dataSnapshot.getValue(User.class);
+                assert user != null;
                 username.setText(user.getUsername());
                 if("default".equals(user.getImageURL())){
                     profile_image.setImageResource(R.mipmap.ic_launcher);
@@ -119,6 +113,7 @@ public class MessageActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
                     Chat chat = snapshot.getValue(Chat.class);
+                    assert chat != null;
                     if(chat.getReceiver().equals(fuser.getUid())&&chat.getSender().equals(userid)){
                         HashMap<String,Object> hashMap = new HashMap<>();
                         hashMap.put("isseen",true);
@@ -167,6 +162,7 @@ public class MessageActivity extends AppCompatActivity {
                 mChat.clear();
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
                     Chat chat = snapshot.getValue(Chat.class);
+                    assert chat != null;
                     if(chat.getReceiver().equals(myid)&& chat.getSender().equals(userid)|| chat.getReceiver().equals(userid)&& chat.getSender().equals(myid)){
                         mChat.add(chat);
                     }

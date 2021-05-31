@@ -44,7 +44,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.user_item,parent,false);
-        return new UserAdapter.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -76,13 +76,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             holder.img_on.setVisibility(View.GONE);
             holder.img_off.setVisibility(View.GONE);
         }
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(mContext, MessageActivity.class);
-                intent.putExtra("userid",user.getId());
-                mContext.startActivity(intent);
-            }
+        holder.itemView.setOnClickListener(view -> {
+            Intent intent = new Intent(mContext, MessageActivity.class);
+            intent.putExtra("userid",user.getId());
+            mContext.startActivity(intent);
         });
 
     }
@@ -93,13 +90,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     }
 
 
-    class  ViewHolder extends RecyclerView.ViewHolder{
+    static class  ViewHolder extends RecyclerView.ViewHolder{
 
         public TextView username;
         public ImageView profile_image;
-        private ImageView img_on;
-        private ImageView img_off;
-        private TextView last_msg;
+        private final ImageView img_on;
+        private final ImageView img_off;
+        private final TextView last_msg;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             username = itemView.findViewById(R.id.username);
@@ -121,18 +118,17 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
                     Chat chat = snapshot.getValue(Chat.class);
 
+                    assert firebaseUser != null;
+                    assert chat != null;
                     if((firebaseUser.getUid().equals(chat.getReceiver())&& userid.equals(chat.getSender())|| (firebaseUser.getUid().equals(chat.getSender())) && userid.equals(chat.getReceiver()))){
                         theLastMessage = chat.getMessage();
                     }
 
                 }
-                switch (theLastMessage){
-                    case "default":
-                        last_msg.setText("No Message");
-                        break;
-                    default:
-                        last_msg.setText(theLastMessage);
-                        break;
+                if ("default".equals(theLastMessage)) {
+                    last_msg.setText("No Message");
+                } else {
+                    last_msg.setText(theLastMessage);
                 }
                 theLastMessage ="default";
             }

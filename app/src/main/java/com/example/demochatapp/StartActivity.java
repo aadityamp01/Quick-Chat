@@ -35,17 +35,7 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
         login = findViewById(R.id.login);
         register = findViewById(R.id.register);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(StartActivity.this,LoginActivity.class));
-            }
-        });
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(StartActivity.this,RegisterActivity.class));
-            }
-        });
+        login.setOnClickListener(view -> startActivity(new Intent(StartActivity.this,LoginActivity.class)));
+        register.setOnClickListener(view -> startActivity(new Intent(StartActivity.this,RegisterActivity.class)));
     }
 }

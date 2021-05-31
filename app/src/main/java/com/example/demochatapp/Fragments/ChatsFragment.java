@@ -51,7 +51,7 @@ public class ChatsFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         fuser = FirebaseAuth.getInstance().getCurrentUser();
-        userslist = new ArrayList<String>();
+        userslist = new ArrayList<>();
 
         reference = FirebaseDatabase.getInstance().getReference("Chats");
         reference.addValueEventListener(new ValueEventListener() {
@@ -61,6 +61,7 @@ public class ChatsFragment extends Fragment {
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
                     Chat chat = snapshot.getValue(Chat.class);
 
+                    assert chat != null;
                     if(fuser.getUid().equals(chat.getSender())){
                         userslist.add(chat.getReceiver());
                     }
@@ -92,6 +93,7 @@ public class ChatsFragment extends Fragment {
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
                     User user = snapshot.getValue(User.class);
                     for(String name: userslist){
+                        assert user != null;
                         if(name.equals(user.getId())){
                             display_chat.add(user);
                             break;
