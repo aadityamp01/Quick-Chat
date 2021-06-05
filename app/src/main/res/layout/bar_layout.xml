@@ -8,7 +8,7 @@
     android:id="@+id/toolbar"
     android:background="@color/colorPrimary"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-    app:popupTheme="@style/MenuuStyle"
+    app:popupTheme="@style/MenuStyle"
     tools:ignore="InvalidId">
 
 </androidx.appcompat.widget.Toolbar>

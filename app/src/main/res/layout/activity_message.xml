@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/MenuuStyle"
+            app:popupTheme="@style/MenuStyle"
             >
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="30dp"
@@ -60,6 +60,8 @@
             android:layout_toStartOf="@id/btn_send"
             android:layout_centerVertical="true"
             android:hint="@string/type_a_message_here"
+            android:autofillHints="text"
+            android:inputType="text"
             android:background="@android:color/transparent"
             />
         <ImageButton
@@ -67,7 +69,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/ic_action_name"
-            android:layout_alignParentEnd="true"/>
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/send_message"/>
     </RelativeLayout>
 
 

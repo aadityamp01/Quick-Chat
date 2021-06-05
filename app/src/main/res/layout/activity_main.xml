@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/MenuuStyle">
+            app:popupTheme="@style/MenuStyle">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
@@ -30,7 +30,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginLeft="25dp"
                 android:text="@string/username"
                 android:textColor="#ffff"
                 android:textStyle="bold" />
@@ -39,7 +38,6 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
-            IndicatorColor="#FFFFFF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
