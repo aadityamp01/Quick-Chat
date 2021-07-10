@@ -25,7 +25,7 @@
 
 ## Requirements
 1. Android Version 5.0 and above
-2. CompileSdkVersion 29
+2. CompileSdkVersion 30
 3. MinSdkVersion 21
 4. Androidx
 
@@ -73,4 +73,4 @@ git remote add upstream https://github.com/aadityamp01/Quick-Chat.git
 ###### Navigate to your forked repository, and press the “New pull request” button on your left-hand side of the page.
 
 ## Contact
-> **_If you face any issue, feel free to contact me: @ [aadityamp01@gmail.com]_**
+> **_If you face any issue, feel free to contact me: @ [ampicopn@gmail.com]_**
