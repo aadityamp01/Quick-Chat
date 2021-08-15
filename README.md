@@ -74,3 +74,5 @@ git remote add upstream https://github.com/aadityamp01/Quick-Chat.git
 
 ## Contact
 > **_If you face any issue, feel free to contact me: @ [ampicopn@gmail.com]_**
+
+#### Made with ❤ by Aaditya Paithane
