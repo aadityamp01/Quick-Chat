@@ -1,6 +1,5 @@
 package com.example.demochatapp.Model;
 
-import javax.xml.transform.sax.SAXResult;
 
 public class Chat  {
 
