@@ -1,6 +1,5 @@
 package com.example.demochatapp.Fragments;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Intent;
