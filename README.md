@@ -1,6 +1,7 @@
 # Quick-Chat
 
 #### **_Quick Chat is an android application that provides users quick messaging platform for communication._**
+ Simple and clean UI of the applicaion makes it easy to use for everyone! Try it with your community!
 
 ## Features of the App
  1. User can register account with email and username
