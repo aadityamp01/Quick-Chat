@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setTitle("");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         profile_image = findViewById(R.id.profile_image);
         username = findViewById(R.id.username);

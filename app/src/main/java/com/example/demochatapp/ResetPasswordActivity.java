@@ -26,6 +26,9 @@ public class ResetPasswordActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setTitle("Reset Password");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(v -> {
+            onBackPressed();
+        });
 
         send_email = findViewById(R.id.send_email);
         btn_reset = findViewById(R.id.btn_reset);

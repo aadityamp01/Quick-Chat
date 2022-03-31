@@ -30,6 +30,9 @@ public class LoginActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setTitle("Login");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(v -> {
+            onBackPressed();
+        });
 
         auth = FirebaseAuth.getInstance();
 

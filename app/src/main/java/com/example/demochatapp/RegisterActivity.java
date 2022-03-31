@@ -34,6 +34,9 @@ public class RegisterActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setTitle("Register");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(v -> {
+            onBackPressed();
+        });
 
         username = findViewById(R.id.username);
         email = findViewById(R.id.email);
