@@ -3,4 +3,8 @@
     <color name="colorPrimary">#65A3FF</color>
     <color name="colorPrimaryDark">#65A3FF</color>
     <color name="colorAccent">#65A3FF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="purple_200">#FF009688</color>
+    <color name="purple_500">#FF009688</color>
+    <color name="purple_700">#FF009688</color>
 </resources>

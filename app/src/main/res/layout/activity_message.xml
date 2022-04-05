@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6E6E6"
+    android:background="@drawable/chat_bg"
     tools:context=".MessageActivity">
 
 
@@ -46,31 +46,75 @@
         android:layout_above="@id/bottom">
 
     </androidx.recyclerview.widget.RecyclerView>
+
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:background="#fff"
         android:id="@+id/bottom"
-        android:layout_alignParentBottom="true">
-        <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/text_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="Type message..."
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/btn_send"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_action_name"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/circle_white"
+            android:contentDescription="@string/send_message"/>
+
+
+        <!--<EditText
             android:id="@+id/text_send"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toStartOf="@id/btn_send"
             android:layout_centerVertical="true"
-            android:hint="@string/type_a_message_here"
+            android:layout_toStartOf="@id/btn_send"
             android:autofillHints="text"
-            android:inputType="text"
             android:background="@android:color/transparent"
-            />
+            android:hint="@string/type_a_message_here"
+            android:inputType="text" />
+
         <ImageButton
             android:id="@+id/btn_send"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/ic_action_name"
             android:layout_alignParentEnd="true"
-            android:contentDescription="@string/send_message"/>
+            android:background="@drawable/ic_action_name"
+            android:contentDescription="@string/send_message" />-->
     </RelativeLayout>
 
 
