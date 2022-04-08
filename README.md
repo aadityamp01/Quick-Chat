@@ -20,8 +20,8 @@
 
 |<img src="https://github.com/aadityamp01/Quick-Chat/blob/master/images/img1.jpg" alt="drawing" width="250"/> | <img src="https://github.com/aadityamp01/Quick-Chat/blob/master/images/img2.jpg" alt="drawing" width="250"/> | <img src="https://github.com/aadityamp01/Quick-Chat/blob/master/images/img3.jpg" alt="drawing" width="250"/> | 
 |:---:|:---:|:---:|
-|<img src="https://github.com/aadityamp01/Quick-Chat/blob/master/images/img4.jpg" alt="drawing" width="250"/>|<img src="https://github.com/aadityamp01/Quick-Chat/blob/master/images/img5.png" alt="drawing" width="250"/>|<img src="https://github.com/aadityamp01/Quick-Chat/blob/master/images/img6.png" alt="drawing" width="250"/>|
-|<img src="https://github.com/aadityamp01/Quick-Chat/blob/master/images/img7.jpg" alt="drawing" width="250"/>|<img src="https://github.com/aadityamp01/Quick-Chat/blob/master/images/img8.jpg" alt="drawing" width="250"/> | <img src="https://github.com/aadityamp01/Quick-Chat/blob/master/images/img9.jpg" alt="drawing" width="250"/>| 
+|<img src="https://github.com/aadityamp01/Quick-Chat/blob/master/images/img4.jpg" alt="drawing" width="250"/>|<img src="https://github.com/aadityamp01/Quick-Chat/blob/master/images/img5.jpg" alt="drawing" width="250"/>|<img src="https://github.com/aadityamp01/Quick-Chat/blob/master/images/img6.jpg" alt="drawing" width="250"/>|
+|<img src="https://github.com/aadityamp01/Quick-Chat/blob/master/images/img7.jpg" alt="drawing" width="250"/>|<img src="https://github.com/aadityamp01/Quick-Chat/blob/master/images/img8.jpg" alt="drawing" width="250"/> |
 
 
 ## Requirements
